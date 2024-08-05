@@ -64,7 +64,7 @@ main{
 }
 
 .filter{
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .filter-sort button{
@@ -81,6 +81,14 @@ main{
 .filter-sort button:hover{
     border-color: rgb(7, 65, 102);
     background-color: rgb(7, 65, 102);
+}
+
+.filter-sort h2{
+    text-align: center;
+}
+
+.sort{
+    margin-left: 20px;
 }
 
 .article-list{

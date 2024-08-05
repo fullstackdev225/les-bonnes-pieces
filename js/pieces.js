@@ -65,3 +65,25 @@ priceButton.addEventListener("input", () => {
     document.querySelector(".article-list").innerHTML = "";
     displayArticle(lowPrice);
 });
+
+
+//making sort featured...
+const ascendingButton = document.getElementById("ascending-price");
+ascendingButton.addEventListener("click", () => {
+    const ascendingPrice = Array.from(articles);
+
+    ascendingPrice.sort((a,b) => a.prix - b.prix);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(ascendingPrice);
+});
+
+const decreasingButton = document.getElementById("decreasing-price");
+decreasingButton.addEventListener("click", () => {
+    const decreasingPrice = Array.from(articles);
+
+    decreasingPrice.sort((a,b) => b.prix - a.prix);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(decreasingPrice);
+});
