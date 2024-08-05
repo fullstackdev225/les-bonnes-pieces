@@ -40,3 +40,50 @@ function displayArticle(articles){
 }
 
 displayArticle(articles);
+
+//making filter featured...
+const opticalButton = document.getElementById("optical-article");
+opticalButton.addEventListener("click", () => {
+    const opticalArticle = articles.filter(article => article.categorie === "Optiques");
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(opticalArticle);
+});
+
+const brakingButton = document.getElementById("braking-article");
+brakingButton.addEventListener("click", () => {
+    const brakingArticle = articles.filter(article => article.categorie === "Freinage");
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(brakingArticle);
+});
+
+const priceButton = document.getElementById("low-price");
+priceButton.addEventListener("input", () => {
+    const lowPrice = articles.filter(article => article.prix < 40);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(lowPrice);
+});
+
+
+//making sort featured...
+const ascendingButton = document.getElementById("ascending-price");
+ascendingButton.addEventListener("click", () => {
+    const ascendingPrice = Array.from(articles);
+
+    ascendingPrice.sort((a,b) => a.prix - b.prix);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(ascendingPrice);
+});
+
+const decreasingButton = document.getElementById("decreasing-price");
+decreasingButton.addEventListener("click", () => {
+    const decreasingPrice = Array.from(articles);
+
+    decreasingPrice.sort((a,b) => b.prix - a.prix);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(decreasingPrice);
+});
