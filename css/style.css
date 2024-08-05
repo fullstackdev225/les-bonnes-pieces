@@ -91,6 +91,10 @@ main{
     margin-left: 20px;
 }
 
+.opinion-form .button{
+    text-align: center;
+}
+
 .article-list{
     margin-left: 20px;
     display: flex;
@@ -114,6 +118,22 @@ main{
 .article-list p{
     margin-top: 4px;
     margin-bottom: 4px;
+}
+
+.article-list button{
+    border: 2px solid rgb(10, 118, 185);
+    background-color: rgb(10, 118, 185);
+    cursor: pointer;
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 350ms;
+}
+
+.article-list button:hover{
+    border-color: rgb(7, 65, 102);
+    background-color: rgb(7, 65, 102);
 }
 
 /* style of footer */

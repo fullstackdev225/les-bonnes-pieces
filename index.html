@@ -35,7 +35,23 @@
                  <div class="sort">
                     <button id="ascending-price">Prix croissant</button><br><br>
                     <button id="decreasing-price">Prix décroissant</button>
-                 </div>
+                 </div><br><br>
+
+                 <h2>Envoyer vos avis</h2>
+                 <form class="opinion-form">
+                    <label for="article-id">Identifiant de la pièce</label><br>
+                    <input type="number" name="article-id" id="article-id" required><br><br>
+
+                    <label for="username">Nom d'utilisateur</label><br>
+                    <input type="text" name="username" id="username" required><br><br>
+
+                    <label for="user-opinion">Avis</label><br>
+                    <textarea name="user-opinion" id="user-opinion" required cols="30" rows="10"></textarea><br><br>
+
+                    <div class="button">
+                        <button id="form-btn">Envoyer</button>
+                    </div>
+                 </form>
             </section>
 
             <section class="article-list">
