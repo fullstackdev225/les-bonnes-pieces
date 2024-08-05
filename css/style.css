@@ -54,7 +54,7 @@ main{
     border: 2px solid #fff;
     background-color: #fff;
     box-shadow: 0px 0px 4px gray;
-    width: 300px;
+    width: 400px;
     height: 1000px;
     margin-left: 10px;
 }
@@ -65,6 +65,27 @@ main{
 
 .article-list{
     margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.article-list article{
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.article-list img{
+    max-width: 200px;
+}
+
+.article-list h2{
+    text-align: center;
+}
+
+.article-list p{
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 /* style of footer */
