@@ -40,3 +40,28 @@ function displayArticle(articles){
 }
 
 displayArticle(articles);
+
+//making filter featured...
+const opticalButton = document.getElementById("optical-article");
+opticalButton.addEventListener("click", () => {
+    const opticalArticle = articles.filter(article => article.categorie === "Optiques");
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(opticalArticle);
+});
+
+const brakingButton = document.getElementById("braking-article");
+brakingButton.addEventListener("click", () => {
+    const brakingArticle = articles.filter(article => article.categorie === "Freinage");
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(brakingArticle);
+});
+
+const priceButton = document.getElementById("low-price");
+priceButton.addEventListener("input", () => {
+    const lowPrice = articles.filter(article => article.prix < 40);
+
+    document.querySelector(".article-list").innerHTML = "";
+    displayArticle(lowPrice);
+});
