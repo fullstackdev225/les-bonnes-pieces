@@ -27,6 +27,7 @@ function displayArticle(articles){
         const articleAvailable = document.createElement("p");
         articleAvailable.innerHTML = article.disponibilite ? "En stock" : "Rupture de stock";
 
+
         const articleList = document.querySelector(".article-list");
         articleList.appendChild(articleElement);
 
