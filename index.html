@@ -27,6 +27,29 @@
 
                  <label for="max-price">Prix maximum :</label><br>
                  <input type="range" name="max-price" id="max-price" step="0" min="0" max="60">
+                 <br><br><br>
+
+                 <h2>Envoyer vos avis</h2>
+                 <form class="form">
+                    <div class="form__section">
+                        <label for="article-id" class="form__label">Identifiant de la pièce</label><br>
+                        <input type="number" name="article-id" id="article-id" required class="form__input">
+                    </div><br>
+
+                    <div class="form__section">
+                        <label for="username" class="form__label">Nom d'utilisateur</label><br>
+                        <input type="text" name="username" id="username" required class="form__input">
+                    </div><br>
+
+                    <div class="form__section">
+                        <label for="user-message" class="form__label">Message</label><br>
+                         <textarea name="user-message" id="user-message" required cols="30" rows="10" class="form__input"></textarea>
+                    </div><br>
+
+                    <div class="form__section">
+                        <button type="submit" class="btn">Envoyer</button>
+                    </div>
+                 </form>
             </section>
 
             <section class="section-articles">

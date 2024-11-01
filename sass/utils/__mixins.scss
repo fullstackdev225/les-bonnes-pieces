@@ -9,7 +9,7 @@
    transition: all 350ms;
 }
 
-@mixin button-hover($color){
-    border-color: darken($color, 10);
-    background-color: darken($color, 10);
+@mixin button-hover{
+    border-color: darken($color-primary, 10);
+    background-color: darken($color-primary, 10);
 }

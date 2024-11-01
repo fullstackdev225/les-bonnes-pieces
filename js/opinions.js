@@ -17,3 +17,25 @@ export function getOpinions(){
         });
     }
 }
+
+export function addOpinions(){
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const opinions = {
+            pieceId: parseInt(event.target.querySelector("[name=article-id]").value),
+            utilisateur: event.target.querySelector("[name=username]").value,
+            commentaire: event.target.querySelector("[name=user-message]").value
+        };
+
+        const chargeUtile = JSON.stringify(opinions);
+
+        fetch("http://localhost:8081/avis", {
+            method: post,
+            headers: {"Content-Type" : "application/json"},
+            body: chargeUtile
+        });
+    });
+}
