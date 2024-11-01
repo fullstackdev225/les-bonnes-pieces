@@ -33,7 +33,7 @@ export function addOpinions(){
         const chargeUtile = JSON.stringify(opinions);
 
         fetch("http://localhost:8081/avis", {
-            method: post,
+            method: "POST",
             headers: {"Content-Type" : "application/json"},
             body: chargeUtile
         });
