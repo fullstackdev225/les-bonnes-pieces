@@ -1,3 +1,5 @@
+import { getOpinions } from "./opinions.js";
+
 //we getting data articles from api
 const response = await fetch("http://localhost:8081/pieces");
 const articles = await response.json();
@@ -25,6 +27,11 @@ function displayArticles(articles){
         const articleAvailability = document.createElement("p");
         articleAvailability.innerHTML = article.disponibilite ? "En stock" : "Rupture de stock";
 
+        const opinionsButton = document.createElement("button");
+        opinionsButton.dataset.id = article.id;
+        opinionsButton.classList.add("btn");
+        opinionsButton.textContent = "Voir avis";
+
         const articleElement = document.createElement("article");
 
         const articlesLists = document.querySelector(".section-articles");
@@ -36,7 +43,10 @@ function displayArticles(articles){
         articleElement.appendChild(articleType);
         articleElement.appendChild(articleDescription);
         articleElement.appendChild(articleAvailability);
+        articleElement.appendChild(opinionsButton);
     }
+
+    getOpinions();
 }
 
 displayArticles(articles);
