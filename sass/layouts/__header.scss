@@ -1,0 +1,15 @@
+.header{
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+    padding: 15px;
+
+    &__icon{
+        margin-left: 100px;
+    }
+
+    &__title{
+        text-align: center;
+        margin-top: -60px;
+        color: $color-secondary;
+    }
+}

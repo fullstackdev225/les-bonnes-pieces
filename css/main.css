@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+.header {
+  border: 2px solid rgb(123, 12, 213);
+  background-color: rgb(123, 12, 213);
+  padding: 15px;
+}
+.header__icon {
+  margin-left: 100px;
+}
+.header__title {
+  text-align: center;
+  margin-top: -60px;
+  color: #fff;
+}
+
+.footer {
+  border: 2px solid rgb(123, 12, 213);
+  background-color: rgb(123, 12, 213);
+}
+.footer__text {
+  color: #fff;
+  text-align: center;
+}
+.footer__text span {
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+}
+main .section-filter {
+  border: 2px solid #fff;
+  background-color: #fff;
+  padding: 10px;
+  min-width: 400px;
+  min-height: 400px;
+  box-shadow: 0px 0px 4px grey;
+  margin-left: 20px;
+}
+main .section-filter h1 {
+  text-align: center;
+}
+main .section-articles {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .section-articles article {
+  border: 2px solid #000;
+  padding: 8px;
+  margin: 8px;
+}
+main .section-articles article img {
+  width: 200px;
+}
+main .section-articles article h2 {
+  text-align: center;
+}
+main .section-articles article p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/*# sourceMappingURL=main.css.map */
