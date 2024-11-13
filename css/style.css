@@ -57,6 +57,10 @@ main{
     text-align: center;
 }
 
+.section-filter h2{
+    text-align: center;
+}
+
 .articles-lists{
     margin-left: 20px;
     display: flex;
