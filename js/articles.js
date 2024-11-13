@@ -40,3 +40,49 @@ function displayArticles(articles){
 }
 
 displayArticles(articles);
+
+//sort articles...
+const buttonSort1 = document.getElementById("btn-sort1");
+buttonSort1.addEventListener("click", () => {
+    const increasingPrice = Array.from(articles);
+
+    increasingPrice.sort((a,b) =>  a.prix - b.prix);
+
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(increasingPrice);
+});
+
+const buttonSort2 = document.getElementById("btn-sort2");
+buttonSort2.addEventListener("click", () => {
+    const decreasingPrice = Array.from(articles);
+
+    decreasingPrice.sort((a,b) => b.prix - a.prix);
+
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(decreasingPrice);
+});
+
+//filter articles...
+const buttonFilter1 = document.getElementById("btn-filter1");
+buttonFilter1.addEventListener("click", () => {
+    const opticalArticles = articles.filter(article => article.categorie === "Optiques");
+
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(opticalArticles);
+});
+
+const buttonFilter2 = document.getElementById("btn-filter2");
+buttonFilter2.addEventListener("click", () => {
+    const brakingArticles = articles.filter(article => article.categorie === "Freinage");
+
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(brakingArticles);
+});
+
+const inputMaxPrice = document.getElementById("max-price");
+inputMaxPrice.addEventListener("input", () => {
+     const maxPrice = articles.filter(article => article.prix <= inputMaxPrice.value);
+
+     document.querySelector(".articles-lists").innerHTML = "";
+     displayArticles(maxPrice);
+});
