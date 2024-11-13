@@ -1,8 +1,11 @@
-import { getOpinions } from "./opinions.js";
+import { addOpinions, getOpinions } from "./opinions.js";
 
 //we getting data from api...
 const response = await fetch("http://localhost:8081/pieces");
 const articles = await response.json();
+
+//we add opinions...
+addOpinions();
 
 //we display articles...
 function displayArticles(articles){
@@ -46,6 +49,7 @@ function displayArticles(articles){
         articleElement.appendChild(opinionsButton);
     }
 
+    //we getting opinions...
     getOpinions();
 }
 

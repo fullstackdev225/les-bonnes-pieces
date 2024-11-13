@@ -26,7 +26,29 @@
                   <button class="btn" id="btn-filter2">Freinage</button><br><br><br>
 
                   <label for="max-price">Prix maximum :</label><br>
-                  <input type="range" name="max-price" id="max-price" min="0" max="60" step="5">
+                  <input type="range" name="max-price" id="max-price" min="0" max="60" step="5"><br><br><br>
+
+                  <h2>Envoyer vos avis</h2>
+                  <form method="post" class="form">
+                       <div class="form-section">
+                           <label for="article-id">Identifiant de la pièce :</label><br>
+                           <input type="number" name="article-id" id="article-id" required>
+                       </div><br>
+
+                       <div class="form-section">
+                            <label for="username">Nom d'utilisateur :</label><br>
+                            <input type="text" name="username" id="username" required>
+                       </div><br>
+
+                       <div class="form-section">
+                           <label for="user-opinion">Avis :</label><br>
+                           <textarea name="user-opinion" id="user-opinion" required cols="30" rows="10"></textarea>
+                       </div><br>
+                       
+                       <div class="form-section">
+                           <button type="submit" class="btn">Envoyer</button>
+                       </div>
+                  </form>
             </section>
 
             <section class="articles-lists">
