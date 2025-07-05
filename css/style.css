@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: #f4f4f4;
+}
+
+/* style of header */
+header{
+    border: 2px solid rgb(185, 18, 201);
+    background-color: rgb(185, 18, 201);
+}
+
+header .navbar-brand{
+    margin-left: 100px;
+}
+
+header .navbar-nav{
+    display: flex;
+    float: right;
+    margin-right: 100px;
+}
+
+header .nav-item{
+    list-style-type: none;
+}
+
+header .nav-link{
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 300ms ease;
+}
+
+header .nav-link:hover{
+    color: rgb(90, 12, 97);
+}
+
+/* style of the main section */
+main{
+    display: flex;
+}
+
+.section-filter{
+    border:  2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px gray;
+    min-width: 300px;
+    min-height: 400px;
+    margin-left: 100px;
+}
+
+.section-filter h1{
+    text-align: center;
+    color: rgb(185, 18, 201);
+}
+
+
+/* style of the footer */
+footer{
+    border: 2px solid rgb(185, 18, 201);
+    background-color: rgb(185, 18, 201);
+    color: white;
+    text-align: center;
+}
