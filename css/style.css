@@ -56,6 +56,39 @@ main{
     color: rgb(185, 18, 201);
 }
 
+.articles-lists{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.articles-lists article{
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px gray;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.articles-lists article img{
+    max-width: 200px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.articles-lists article h2{
+    font-size: 1.5em;
+    color: rgb(185, 18, 201);
+}
+
+.articles-lists article p{
+    font-size: 1em;
+    color: #333;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 
 /* style of the footer */
 footer{
