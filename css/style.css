@@ -6,6 +6,22 @@ body{
     background-color: #f4f4f4;
 }
 
+button{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(185, 18, 201);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 300ms ease;
+}
+
+button:hover{
+    background-color: rgb(90, 12, 97);
+}
+
 /* style of header */
 header{
     border: 2px solid rgb(185, 18, 201);
@@ -49,6 +65,7 @@ main{
     min-width: 300px;
     min-height: 400px;
     margin-left: 100px;
+    padding: 20px;
 }
 
 .section-filter h1{

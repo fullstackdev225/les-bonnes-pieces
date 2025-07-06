@@ -41,3 +41,36 @@ function displayArticles(articles) {
 
 displayArticles(articles);
 
+// Filtering articles by type...
+const btnOptique = document.getElementById('btn-optique');
+const btnFreinage = document.getElementById('btn-freinage');
+
+btnOptique.addEventListener('click', () => {
+    const filteredArticles = articles.filter(article => article.categorie === 'Optiques');
+    document.querySelector('.articles-lists').innerHTML = ''; // Clear previous articles
+    displayArticles(filteredArticles);
+});
+
+btnFreinage.addEventListener('click', () => {
+    const filteredArticles = articles.filter(article => article.categorie === 'Freinage');
+    document.querySelector('.articles-lists').innerHTML = ''; // Clear previous articles
+    displayArticles(filteredArticles);
+});
+
+// Sorting articles by price...
+const btnIncrease = document.getElementById('btn-increase');
+const btnDecrease = document.getElementById('btn-decrease');
+
+btnIncrease.addEventListener('click', () => {
+    const sortedArticles = Array.from(articles);
+    sortedArticles.sort((a, b) => a.prix - b.prix);
+    document.querySelector('.articles-lists').innerHTML = ''; // Clear previous articles
+    displayArticles(sortedArticles);
+});
+
+btnDecrease.addEventListener('click', () => {
+    const sortedArticles = Array.from(articles);
+    sortedArticles.sort((a, b) => b.prix - a.prix);
+    document.querySelector('.articles-lists').innerHTML = ''; // Clear previous articles
+    displayArticles(sortedArticles);
+});
