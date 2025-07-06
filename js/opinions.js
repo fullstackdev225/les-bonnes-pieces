@@ -18,3 +18,28 @@ export function getOpinions(){
     }
 
 }
+
+
+export function setOpinions(){
+    const form = document.querySelector('.opinion-form');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const avis = {
+            pieceId: parseInt(event.target.querySelector('#article-id').value),
+            utilisateur: event.target.querySelector('#username').value,
+            commentaire: event.target.querySelector('#opinion').value
+        };
+
+        const chargeUtile = JSON.stringify(avis);
+
+        fetch('http://localhost:8081/avis', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: chargeUtile
+        });
+    });
+}
