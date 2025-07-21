@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+/* header */
+.header{
+    border: 2px solid rgb(221, 23, 221);
+    background-color: rgb(221, 23, 221);
+}
+
+.header .navbar .navbar-brand{
+    margin-left: 50px;
+}
+
+.header .navbar .navbar-nav{
+    float: right;
+    display: flex;
+    margin-right: 50px;
+    margin-top: 25px;
+}
+
+.header .navbar .navbar-nav .nav-item{
+    list-style-type: none;
+}
+
+.header .navbar .nav-link{
+    text-decoration: none;
+    padding: 20px 30px;
+    color: white;
+    transition: color 350ms;
+}
+
+.header .navbar .nav-link:hover{
+    color: rgb(133, 8, 133);
+    text-decoration: underline;
+}
+
+/* main content */
+main{
+    display: flex;
+}
+
+.section-filter{
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px gray;
+    min-width: 300px;
+    min-height: 400px;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.section-filter h1{
+    text-align: center;
+}
+
+.articles-lists{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles-lists article{
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 3px rgb(221, 23, 221);
+    padding: 8px;
+    margin: 8px;
+}
+
+.articles-lists article img{
+    max-width: 200px;
+}
+
+.articles-lists article h2{
+    text-align: center;
+}
+
+.articles-lists article p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+
+/* footer */
+footer{
+    border: 2px solid rgb(221, 23, 221);
+    background-color: rgb(221, 23, 221);
+    text-align: center;
+    color: #fff;
+}
+
+footer span{
+    text-decoration: underline;
+    text-transform: uppercase;
+}
