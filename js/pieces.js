@@ -1,7 +1,9 @@
-import { getAvis } from "./avis.js";
+import { getAvis, setAvis } from "./avis.js";
 
 const response = await fetch("http://localhost:8081/pieces");
 const pieces = await response.json();
+
+setAvis();
 
 function displayPieces(pieces){
     for(let i = 0 ; i < pieces.length ; i++){
