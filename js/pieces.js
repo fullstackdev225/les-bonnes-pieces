@@ -37,3 +37,37 @@ function displayPieces(pieces){
 }
 
 displayPieces(pieces);
+
+//filtre pieces...
+const buttonOptique = document.getElementById("piece-optique");
+const buttonFreinage = document.getElementById("piece-freinage");
+
+buttonOptique.addEventListener("click", () => {
+    const pieceOptique = pieces.filter(piece => piece.categorie === "Optiques");
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayPieces(pieceOptique);
+});
+
+buttonFreinage.addEventListener("click", () => {
+    const pieceFreinage = pieces.filter(piece => piece.categorie === "Freinage");
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayPieces(pieceFreinage);
+});
+
+//trie pieces...
+const btnSort1 = document.getElementById("prix-croissant");
+const btnSort2 = document.getElementById("prix-decroissant");
+
+btnSort1.addEventListener("click", () => {
+    const prixCroissant = Array.from(pieces);
+    prixCroissant.sort((a, b) => a.prix - b.prix);
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayPieces(prixCroissant);
+});
+
+btnSort2.addEventListener("click", () => {
+    const prixDecroissant = Array.from(pieces);
+    prixDecroissant.sort((a, b) => b.prix - a.prix);
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayPieces(prixDecroissant);
+});
