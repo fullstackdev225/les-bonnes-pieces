@@ -1,3 +1,5 @@
+import { getAvis } from "./avis.js";
+
 const response = await fetch("http://localhost:8081/pieces");
 const pieces = await response.json();
 
@@ -27,13 +29,20 @@ function displayPieces(pieces){
         const articlesLists = document.querySelector(".articles-lists");
         articlesLists.appendChild(articleElement);
 
+        const buttonAvis = document.createElement("button");
+        buttonAvis.dataset.id = pieces[i].id;
+        buttonAvis.textContent = "Voir avis";
+
         articleElement.appendChild(imageElement);
         articleElement.appendChild(nameElement);
         articleElement.appendChild(priceElement);
         articleElement.appendChild(typeElement);
         articleElement.appendChild(descriptionElement);
         articleElement.appendChild(availableElement);
+        articleElement.appendChild(buttonAvis);
     }
+
+    getAvis();
 }
 
 displayPieces(pieces);
