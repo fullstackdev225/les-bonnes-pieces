@@ -1,7 +1,16 @@
 import { getAvis, setAvis } from "./avis.js";
 
-const response = await fetch("http://localhost:8081/pieces");
-const pieces = await response.json();
+let pieces = window.localStorage.getItem("pieces");
+if(pieces === null){
+    const response = await fetch("http://localhost:8081/pieces");
+    pieces = await response.json();
+
+    //on stocke les donées des pièces dans le local storage...
+    window.localStorage.setItem('pieces', JSON.stringify(pieces));
+}
+ else{
+    pieces = JSON.parse(pieces);
+ }
 
 setAvis();
 
