@@ -1,0 +1,33 @@
+.header{
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+
+    &__icon{
+        margin-left: 100px;
+    }
+
+    .navbar{
+        float: right;
+        margin-top: -70px;
+        margin-right: 100px;
+
+        &__nav{
+            display: flex;
+
+            .nav__item{
+                list-style-type: none;
+
+                .nav__link{
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    color: $color-tertiary;
+                    transition: color 250ms;
+
+                    &:hover{
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
