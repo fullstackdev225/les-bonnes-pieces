@@ -1,0 +1,14 @@
+@mixin buttonStyle($color){
+    border: 2px solid $color;
+    background-color: $color;
+    color: $color-tertiary;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+@mixin buttonHover($color){
+    border-color: darken($color, 10);
+    background-color: darken($color, 10);
+}

@@ -26,6 +26,10 @@ function displayArticles(articles){
         const availableElement = document.createElement("p");
         availableElement.innerHTML = articles[i].disponibilite ? "En stock" : "Rupture de stock";
 
+        const buttonElement = document.createElement("button");
+        buttonElement.dataset.id = articles[i].id;
+        buttonElement.textContent = "Voir avis";
+
         const articlesLists = document.querySelector(".articles-lists");
         articlesLists.appendChild(articleElement);
 
@@ -35,6 +39,7 @@ function displayArticles(articles){
         articleElement.appendChild(typeElement);
         articleElement.appendChild(descriptionElement);
         articleElement.appendChild(availableElement);
+        articleElement.appendChild(buttonElement);
     }
 }
 
