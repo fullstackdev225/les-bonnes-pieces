@@ -33,7 +33,21 @@
                     <p><a href="#" id="freinage">Freinage</a></p>
                     <p><a href="#" id="increase-price">Prix croissant</a></p>
                     <p><a href="#" id="decrease-price">Prix decroissant</a></p>
-                </div>
+                </div><br><br>
+
+                <h2 class="filter__title">Envoyer vos avis</h2>
+                <form class="form">
+                    <label for="piece-id" class="form__label">Identifiant de la piece :</label><br>
+                    <input type="number" name="piece-id" id="piece-id" required class="form__input"><br><br>
+
+                    <label for="username" class="form__label">Nom d'utilisateur :</label><br>
+                    <input type="text" name="username" id="username" required class="form__input"><br><br>
+
+                    <label for="opinion" class="form__label">Avis :</label><br>
+                    <textarea name="opinion" id="opinion" required cols="30" rows="10" class="form__input"></textarea><br><br>
+
+                    <button type="submit">Envoyer</button>
+                </form>
             </section>
 
             <section class="articles-lists">
