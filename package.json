@@ -1,0 +1,12 @@
+{
+  "name": "les-bonnes-pieces",
+  "version": "1.0.0",
+  "description": "Site web de vente de pièces autos",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/main.css"
+  }
+}
