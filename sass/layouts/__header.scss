@@ -1,0 +1,32 @@
+.header{
+    @include head-foot-style;
+
+    &__icon{
+        margin-left: 100px;
+    }
+
+    .navbar{
+        float: right;
+        margin-top: -60px;
+        margin-right: 100px;
+
+        &__nav{
+            display: flex;
+
+            .nav__item{
+                list-style-type: none;
+
+                .nav__link{
+                    color: $color-tertiary;
+                    padding: 20px 30px;
+                    text-decoration: none;
+                    transition: color 350ms;
+
+                    &:hover{
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}

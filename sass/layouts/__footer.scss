@@ -1,0 +1,15 @@
+.footer{
+    @include head-foot-style;
+
+    &__text{
+        text-align: center;
+        color: $color-tertiary;
+
+        span{
+            text-transform: uppercase;
+            text-decoration: underline;
+            color: $color-secondary;
+            font-weight: bold;
+        }
+    }
+}
