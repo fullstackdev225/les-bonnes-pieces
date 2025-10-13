@@ -1,6 +1,10 @@
+import { getOpinions, setOpinions } from "./opinions.js";
+
 //we getting articles from api...
 const response = await fetch("http://localhost:8081/pieces");
 const articles = await response.json();
+
+setOpinions();
 
 //we display articles on the page...
 function displayArticles(articles){
@@ -25,6 +29,10 @@ function displayArticles(articles){
         const articleAvailability = document.createElement("p");
         articleAvailability.innerHTML = articles[i].disponibilite ? "En stock" : "Rupture de stock";
 
+        const opinionButton = document.createElement("button");
+        opinionButton.dataset.id = articles[i].id;
+        opinionButton.textContent = "Voir avis";
+
         const articlesLists = document.querySelector(".articles-lists");
         articlesLists.appendChild(articleElement);
 
@@ -34,7 +42,42 @@ function displayArticles(articles){
         articleElement.appendChild(articleType);
         articleElement.appendChild(articleDescription);
         articleElement.appendChild(articleAvailability);
+        articleElement.appendChild(opinionButton);
    }
+
+   getOpinions();
 }
 
 displayArticles(articles);
+
+//sort of articles...
+const btnSort1 = document.getElementById("btn-sort1");
+btnSort1.addEventListener("click", () => {
+   const opticalArticles = articles.filter(article => article.categorie === "Optiques");
+   document.querySelector(".articles-lists").innerHTML = "";
+   displayArticles(opticalArticles);
+});
+
+const btnSort2 = document.getElementById("btn-sort2");
+btnSort2.addEventListener("click", () => {
+   const freinageArticles = articles.filter(article => article.categorie === "Freinage");
+   document.querySelector(".articles-lists").innerHTML = "";
+   displayArticles(freinageArticles);
+});
+
+//filter of articles...
+const btnFilter1 = document.getElementById("btn-filter1");
+btnFilter1.addEventListener("click", () => {
+   const increasingPrice = Array.from(articles);
+   increasingPrice.sort((a, b) => a.prix - b.prix);
+   document.querySelector(".articles-lists").innerHTML = "";
+   displayArticles(increasingPrice);
+});
+
+const btnFilter2 = document.getElementById("btn-filter2");
+btnFilter2.addEventListener('click', () => {
+   const decreasingPrice = Array.from(articles);
+   decreasingPrice.sort((a, b) => b.prix - a.prix);
+   document.querySelector(".articles-lists").innerHTML = "";
+   displayArticles(decreasingPrice);
+});

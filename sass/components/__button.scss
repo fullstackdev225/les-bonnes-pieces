@@ -1,0 +1,7 @@
+button{
+    @include button;
+
+    &:hover{
+        @include buttonHover;
+    }
+}

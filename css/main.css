@@ -5,6 +5,19 @@ body {
   font-family: "Montserrat";
 }
 
+button {
+  border: 2px solid rgb(111, 8, 170);
+  background-color: rgb(111, 8, 170);
+  color: #fff;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 350ms;
+}
+button:hover {
+  border-color: rgb(79.1966292135, 5.7078651685, 121.2921348315);
+  background-color: rgb(79.1966292135, 5.7078651685, 121.2921348315);
+}
+
 .header {
   border: 2px solid rgb(111, 8, 170);
   background-color: rgb(111, 8, 170);
@@ -31,6 +44,13 @@ body {
 }
 .header .navbar__nav .nav__item .nav__link:hover {
   color: #000;
+}
+
+.form__input {
+  outline: none;
+}
+.form__input:focus {
+  border: 2px solid rgb(111, 8, 170);
 }
 
 .footer {

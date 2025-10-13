@@ -1,0 +1,9 @@
+.form{
+    &__input{
+       outline: none;
+
+       &:focus{
+           border: 2px solid $color-primary;
+       }
+    }
+}

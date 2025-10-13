@@ -3,3 +3,16 @@
     background-color: $color-primary;
 }
 
+@mixin button($color-default: $color-primary){
+    border: 2px solid $color-default;
+    background-color: $color-default;
+    color: $color-tertiary;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+@mixin buttonHover($color-default: $color-primary){
+    border-color: darken($color-default, 10);
+    background-color: darken($color-default, 10);
+}
