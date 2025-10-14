@@ -1,14 +1,19 @@
-export function getOpinions(){
-    const buttonElement = document.querySelectorAll(".articles-lists article button");
-    for(let i = 0 ; i < buttonElement.length ; i++){
-        buttonElement[i].addEventListener("click", async (event) => {
+export function getOpinions() {
+    const buttonElements = document.querySelectorAll(".articles-lists article button");
+
+    for (let i = 0; i < buttonElements.length; i++) {
+        buttonElements[i].addEventListener("click", async (event) => {
             const id = event.target.dataset.id;
+
+            // Récupération des avis depuis l'API
             const response = await fetch(`http://localhost:8081/pieces/${id}/avis`);
             const opinions = await response.json();
-            const articleElement = event.target.parentElement;
 
+            // Affichage des avis dans l'article
+            const articleElement = event.target.parentElement;
             const paragraphElement = document.createElement("p");
-            for(let i = 0 ; i < opinions.length ; i++){
+
+            for (let i = 0; i < opinions.length; i++) {
                 paragraphElement.innerHTML += `${opinions[i].utilisateur} : ${opinions[i].commentaire} <br>`;
             }
 
@@ -16,6 +21,7 @@ export function getOpinions(){
         });
     }
 }
+
 
 
 export function setOpinions(){
