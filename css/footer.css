@@ -1,0 +1,12 @@
+.footer{
+    text-align: center;
+    border: 2px solid rgb(128, 18, 212);
+    background-color: rgb(128, 18, 212);
+    color: #fff;
+}
+
+.footer span{
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: bold;
+}

@@ -1,0 +1,54 @@
+main{
+    display: flex;
+}
+
+.filter{
+    border: 2px solid #fff;
+    background-color: #fff;
+    padding: 10px;
+    min-width: 400px;
+    min-height: 400px;
+    box-shadow: 0px 0px 4px gray;
+    margin-left: 100px;
+}
+
+.filter h1{
+    text-align: center;
+}
+
+.filter .btn-filter a{
+    text-decoration: none;
+    color: rgb(128, 18, 212);
+    transition: color 350ms;
+}
+
+.filter .btn-filter a:hover{
+    color: rgb(72, 8, 121);
+}
+
+.articles-lists{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles-lists article{
+    border: 2px solid #fff;
+    background-color: #fff;
+    padding: 8px;
+    margin: 8px;
+    box-shadow: 0px 0px 3px gray;
+}
+
+.articles-lists article img{
+    max-width: 200px;
+}
+
+.articles-lists article h2{
+    font-weight: normal;
+}
+
+.articles-lists article p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}

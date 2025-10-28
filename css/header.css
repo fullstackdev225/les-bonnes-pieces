@@ -1,0 +1,33 @@
+.header{
+    border: 2px solid rgb(128, 18, 212);
+    background-color: rgb(128, 18, 212);
+}
+
+.header .icon{
+    margin-left: 100px;
+}
+
+.navbar{
+    float: right;
+    margin-right: 100px;
+    margin-top: 8px;
+}
+
+.navbar .navbar-nav{
+    display: flex;
+}
+
+.navbar .nav-item{
+    list-style-type: none;
+}
+
+.navbar .nav-link{
+    text-decoration: none;
+    padding: 20px 30px;
+    color: white;
+    transition: color 350ms;
+}
+
+.navbar .nav-link:hover{
+    color: rgb(63, 8, 106);
+}
