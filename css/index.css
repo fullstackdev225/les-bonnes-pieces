@@ -26,6 +26,10 @@ main{
     color: rgb(72, 8, 121);
 }
 
+.filter h2{
+    text-align: center;
+}
+
 .articles-lists{
     margin-left: 20px;
     display: flex;
