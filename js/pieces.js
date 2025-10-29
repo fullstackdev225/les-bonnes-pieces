@@ -1,8 +1,19 @@
 import { getOpinions, setOpinions } from "./opinions.js";
 
-//we getting data pieces from api...
-const response = await fetch("http://localhost:8081/pieces");
-const pieces = await response.json();
+let pieces = window.localStorage.getItem("pieces");
+if(pieces === null){
+    //we getting data pieces from api...
+    const response = await fetch("http://localhost:8081/pieces");
+    pieces = await response.json();
+
+    const piecesValue = JSON.stringify(pieces);
+
+    window.localStorage.setItem("pieces", piecesValue);
+}
+ else{
+    pieces = JSON.parse(pieces);
+ }
+
 
 setOpinions();
 //we display pieces on the page...
