@@ -63,6 +63,20 @@ main{
     text-align: center;
 }
 
+.filter .btn-sort-filter{
+    margin-left: 20px;
+}
+
+.filter .btn-sort-filter a{
+    color: rgb(114, 15, 196);
+    text-decoration: none;
+    transition: color 250ms;
+}
+
+.filter .btn-sort-filter a:hover{
+    color: rgb(43, 7, 73);
+}
+
 .articles-lists{
     display: flex;
     flex-wrap: wrap;

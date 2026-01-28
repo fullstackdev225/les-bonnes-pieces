@@ -38,3 +38,35 @@ function displayArticles(articles){
 }
 
 displayArticles(articles);
+
+//filter articles...
+const optiquesButton = document.getElementById("btn-filter1");
+optiquesButton.addEventListener("click", () => {
+    const optiquesArticles = articles.filter(article => article.categorie === "Optiques")
+    document.querySelector(".articles-lists").innerHTML = '';
+    displayArticles(optiquesArticles);
+});
+
+const freinageButton = document.getElementById("btn-filter2");
+freinageButton.addEventListener("click", () => {
+    const freinageArticles = articles.filter(article => article.categorie === "Freinage");
+    document.querySelector(".articles-lists").innerHTML = '';
+    displayArticles(freinageArticles);
+});
+
+//sort articles...
+const btnSort1 = document.getElementById("btn-sort1");
+btnSort1.addEventListener("click", () => {
+    const increasePrice = Array.from(articles);
+    increasePrice.sort((a,b) => a.prix - b.prix);
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(increasePrice);
+});
+
+const btnSort2 = document.getElementById("btn-sort2");
+btnSort2.addEventListener("click", () => {
+    const decreasePrice = Array.from(articles);
+    decreasePrice.sort((a,b) => b.prix - a.prix);
+    document.querySelector(".articles-lists").innerHTML = "";
+    displayArticles(decreasePrice);
+});
