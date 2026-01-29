@@ -92,6 +92,14 @@ main{
     color: rgb(43, 7, 73);
 }
 
+.filter h2{
+    text-align: center;
+}
+
+.filter form{
+    margin-left: 20px;
+}
+
 .articles-lists{
     display: flex;
     flex-wrap: wrap;
