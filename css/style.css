@@ -65,6 +65,21 @@ main{
     text-align: center;
 }
 
+.section-filter .btn-filter{
+    margin-left: 20px;
+}
+
+.section-filter .btn-filter a{
+    color: rgb(146, 14, 199);
+    text-decoration: none;
+    transition: all 250ms;
+}
+
+.section-filter .btn-filter a:hover{
+    text-decoration: underline;
+    color: rgb(180, 38, 236);
+}
+
 .section-articles{
     margin-left: 20px;
     display: flex;
