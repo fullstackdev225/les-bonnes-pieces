@@ -4,6 +4,20 @@ body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+button{
+    border: 2px solid rgb(146, 14, 199);
+    background-color: rgb(146, 14, 199);
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+
+button:hover{
+    border-color: rgb(80, 9, 108);
+    background-color: rgb(80, 9, 108);
+}
+
 /* header style */
 
 .header{
