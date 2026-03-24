@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS';
+}
+
+/* header style */
+
+.header{
+    border: 2px solid rgb(138, 17, 203);
+    background-color: rgb(138, 17, 203);
+}
+
+.header .header-icon{
+    margin-left: 100px;
+}
+
+.header .navbar{
+    float: right;
+    margin-top: -70px;
+    margin-right: 100px;
+}
+
+.header .navbar-nav{
+    display: flex;
+}
+
+.header .nav-item{
+    list-style-type: none;
+}
+
+.header .nav-link{
+    padding: 20px 30px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 250ms;
+}
+
+.header .nav-link:hover{
+    color: rgb(70, 10, 102);
+}
+
+.header .active{
+    color: rgb(70, 10, 102);
+}
+
+/* main content style */
+
+main{
+    display: flex;
+}
+
+.filter-section{
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px gray;
+    min-width: 400px;
+    min-height: 400px;
+    margin-left: 100px;
+}
+
+.filter-section h1{
+    text-align: center;
+}
+
+.articles-section{
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.articles-section article{
+    border: 2px solid #fff;
+    background-color: #fff;
+    box-shadow: 0px 0px 4px gray;
+    margin: 8px;
+    padding: 8px;
+}
+
+.articles-section article img{
+    max-width: 200px;
+}
+
+.articles-section article h2{
+    font-weight: normal;
+}
+
+.articles-section article p{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+/* footer style */
+
+.footer{
+    border: 2px solid rgb(138, 17, 203);
+    background-color: rgb(138, 17, 203);
+    text-align: center;
+}
+
+.footer p{
+    color: #fff;
+}
+
+.footer span{
+    text-decoration: underline;
+    font-style: italic;
+}
