@@ -63,6 +63,19 @@ main{
     text-align: center;
 }
 
+.filter-section .btn-filter{
+    margin-left: 20px;
+}
+
+.filter-section .btn-filter a{
+    color: rgb(138, 17, 203);
+    text-decoration: none;
+}
+
+.filter-section .btn-filter a:hover{
+    text-decoration: underline;
+}
+
 .articles-section{
     margin-left: 20px;
     display: flex;
