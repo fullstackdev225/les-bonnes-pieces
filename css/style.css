@@ -90,6 +90,10 @@ main{
     text-decoration: underline;
 }
 
+.filter-section .form-opinion{
+    margin-left: 20px;
+}
+
 .articles-section{
     margin-left: 20px;
     display: flex;

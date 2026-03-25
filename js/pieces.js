@@ -1,8 +1,10 @@
-import { getOpinions } from "./opinions.js";
+import { getOpinions, setOpinions } from "./opinions.js";
 
 //getting pieces data from api...
 const response = await fetch(`http://localhost:8081/pieces`);
 const pieces = await response.json();
+
+setOpinions();
 
 //display pieces on the page...
 function displayPieces(pieces){
