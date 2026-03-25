@@ -1,3 +1,5 @@
+import { getOpinions } from "./opinions.js";
+
 //getting pieces data from api...
 const response = await fetch(`http://localhost:8081/pieces`);
 const pieces = await response.json();
@@ -25,6 +27,10 @@ function displayPieces(pieces){
         const availabilityElement = document.createElement("p");
         availabilityElement.innerHTML = pieces[i].disponibilite ? "En stock" : "Rupture de stock";
 
+       const buttonOpinions = document.createElement("button");
+       buttonOpinions.dataset.id = pieces[i].id;
+       buttonOpinions.textContent = "Voir avis";
+
         const articlesSection = document.querySelector(".articles-section");
         articlesSection.appendChild(articleElement);
 
@@ -34,7 +40,10 @@ function displayPieces(pieces){
         articleElement.appendChild(typeElement);
         articleElement.appendChild(descriptionElement);
         articleElement.appendChild(availabilityElement);
+        articleElement.appendChild(buttonOpinions);
     }
+
+    getOpinions();
 }
 
 displayPieces(pieces);
