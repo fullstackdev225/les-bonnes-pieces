@@ -6,6 +6,20 @@ body{
     font-family: 'Inter';
 }
 
+button{
+    border: 2px solid rgb(97, 11, 178);
+    background-color: rgb(97, 11, 178);
+    color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 350ms;
+}
+
+button:hover{
+    border-color: rgb(72, 11, 129);
+    background-color: rgb(72, 11, 129);
+}
+
 /* header */
 
 .header{
